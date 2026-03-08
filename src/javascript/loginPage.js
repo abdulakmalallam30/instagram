@@ -2,12 +2,17 @@ function checkLogin() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    // Check if the entered username and password are correct
-    if (username === "username" && password === "password") {
-      // Redirect to the desired page
-      window.location.href = "../html/home.html";
+    // Store username and password in localStorage
+    if (username && password) {
+      localStorage.setItem("storedUsername", username);
+      localStorage.setItem("storedPassword", password);
+      
+      // Show the error message
+      var errorElement = document.getElementById("error-message");
+      if (errorElement) {
+        errorElement.style.display = "flex";
+      }
     } else {
-      // Show an error message
-      alert("Incorrect username or password. Please try again.");
+      alert("Please enter both username and password.");
     }
   }
