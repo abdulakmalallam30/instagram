@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deploy Your Instagram Clone</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #262626;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .option {
+            background: #f8f9fa;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #0095f6;
+        }
+        .option h2 {
+            color: #0095f6;
+            margin-top: 0;
+        }
+        .steps {
+            margin: 15px 0;
+        }
+        .step {
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 5px;
+            border-left: 3px solid #8e44ad;
+        }
+        .step-number {
+            display: inline-block;
+            background: #8e44ad;
+            color: white;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            background: #0095f6;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #0081d8;
+        }
+        .code {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .success {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .links {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Deploy Your Instagram Clone Online</h1>
+        <p class="subtitle">Choose one of these free hosting options</p>
+
+        <div class="success">
+            ✅ <strong>Your code is ready for deployment!</strong> All files have been committed to Git.
+        </div>
+
+        <!-- OPTION 1: RENDER.COM -->
+        <div class="option">
+            <h2>⭐ Option 1: Render.com (Recommended - Easiest)</h2>
+            <p><strong>Why?</strong> Free, simple, no credit card required</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Create GitHub Account:</strong> Visit <a href="https://github.com/signup" target="_blank">github.com/signup</a>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Create New Repository:</strong> Go to <a href="https://github.com/new" target="_blank">github.com/new</a>
+                    <ul>
+                        <li>Repository name: <code>instagram-clone</code></li>
+                        <li>Make it Public</li>
+                        <li>Click "Create repository"</li>
+                    </ul>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Push Your Code:</strong> Copy your repository URL from GitHub, then run in PowerShell:
+                    <div class="code">git branch -M main<br>git remote add origin https://github.com/YOUR_USERNAME/instagram-clone.git<br>git push -u origin main</div>
+                    <small>Replace YOUR_USERNAME with your actual GitHub username</small>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <strong>Deploy to Render:</strong>
+                    <ul>
+                        <li>Go to <a href="https://render.com" target="_blank">render.com</a></li>
+                        <li>Sign up with your GitHub account</li>
+                        <li>Click "New +" → "Web Service"</li>
+                        <li>Connect your <code>instagram-clone</code> repository</li>
+                        <li>Keep all default settings</li>
+                        <li>Click "Create Web Service"</li>
+                    </ul>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">5</span>
+                    <strong>Wait 2-3 minutes</strong> for deployment to complete
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">6</span>
+                    <strong>Your site is live! 🎉</strong>
+                    <ul>
+                        <li>Login: <code>https://your-app.onrender.com/src/html/loginPage.html</code></li>
+                        <li>View Credentials: <code>https://your-app.onrender.com/src/html/viewCredentials.html</code></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="https://render.com" class="btn" target="_blank">🚀 Go to Render.com</a>
+                <a href="https://github.com/new" class="btn" target="_blank">Create GitHub Repo</a>
+            </div>
+        </div>
+
+        <!-- OPTION 2: RAILWAY -->
+        <div class="option">
+            <h2>Option 2: Railway.app</h2>
+            <p><strong>Why?</strong> Fast deployment, $5 free credit monthly</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    Push your code to GitHub (same steps as Option 1, steps 1-3)
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Deploy:</strong>
+                    <ul>
+                        <li>Go to <a href="https://railway.app" target="_blank">railway.app</a></li>
+                        <li>Sign up with GitHub</li>
+                        <li>Click "New Project" → "Deploy from GitHub repo"</li>
+                        <li>Select your repository</li>
+                        <li>Wait for deployment</li>
+                        <li>Click "Settings" → "Networking" → "Generate Domain"</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="https://railway.app" class="btn" target="_blank">🚂 Go to Railway.app</a>
+            </div>
+        </div>
+
+        <!-- OPTION 3: FLY.IO -->
+        <div class="option">
+            <h2>Option 3: Fly.io</h2>
+            <p><strong>Why?</strong> More control, command-line deployment</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Install Fly CLI:</strong> Run in PowerShell:
+                    <div class="code">iwr https://fly.io/install.ps1 -useb | iex</div>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Deploy:</strong>
+                    <div class="code">fly auth login<br>fly launch<br>fly deploy</div>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="https://fly.io" class="btn" target="_blank">✈️ Go to Fly.io</a>
+            </div>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Important Notes:</strong>
+            <ul>
+                <li>Free tier apps may sleep after 15 minutes of inactivity</li>
+                <li>First load might take 20-30 seconds (cold start)</li>
+                <li>The credentials.json file will reset when server restarts on free tier</li>
+                <li>For permanent storage, you'd need a database upgrade</li>
+            </ul>
+        </div>
+
+        <div class="links">
+            <h3>📚 Need Help?</h3>
+            <p>Check the <a href="DEPLOYMENT_GUIDE.md">detailed deployment guide</a> for more information</p>
+        </div>
+    </div>
+</body>
+</html>

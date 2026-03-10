@@ -11,6 +11,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('.')); // Serve static files from current directory
 
+// Root route - Landing page
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public_index.html'));
+});
+
 // Path to credentials database file
 const dbPath = path.join(__dirname, 'credentials.json');
 
