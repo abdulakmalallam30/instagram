@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Clone - Launcher</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 500px;
+        }
+        h1 {
+            color: #262626;
+            margin-bottom: 20px;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #0095f6;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 10px;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #0081d8;
+        }
+        .btn-secondary {
+            background: #8e44ad;
+        }
+        .btn-secondary:hover {
+            background: #732d91;
+        }
+        .instructions {
+            text-align: left;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .instructions ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin: 10px 0;
+        }
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Instagram Clone</h1>
+        
+        <div class="warning">
+            <strong>⚠️ IMPORTANT:</strong> The server must be running on port 3000!
+        </div>
+
+        <div class="instructions">
+            <strong>Setup Instructions:</strong>
+            <ol>
+                <li>Open PowerShell or Command Prompt in this folder</li>
+                <li>Run: <code>npm start</code></li>
+                <li>Wait until you see "Server is running"</li>
+                <li>Click the buttons below to access the pages</li>
+            </ol>
+        </div>
+
+        <a href="http://localhost:3000/src/html/loginPage.html" class="btn" target="_blank">
+            🔓 Open Login Page
+        </a>
+        
+        <a href="http://localhost:3000/src/html/viewCredentials.html" class="btn btn-secondary" target="_blank">
+            📋 View Stored Credentials
+        </a>
+
+        <div style="margin-top: 30px; color: #666; font-size: 14px;">
+            <p><strong>Server URL:</strong> http://localhost:3000</p>
+            <p><strong>Database File:</strong> credentials.json</p>
+        </div>
+    </div>
+
+    <script>
+        // Auto-check if server is running
+        fetch('http://localhost:3000/')
+            .then(() => {
+                console.log('✅ Server is running!');
+            })
+            .catch(() => {
+                alert('⚠️ Server is NOT running!\n\nPlease run: npm start\n\nThen refresh this page.');
+            });
+    </script>
+</body>
+</html>

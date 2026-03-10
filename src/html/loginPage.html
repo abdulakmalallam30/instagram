@@ -5,7 +5,15 @@
     <title>Instagram</title>
     <link rel="shortcut icon" href="../images/instalogo.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/loginPage.css">
-    <script src="../javascript/loginPage.js"></script>    
+    <script src="../javascript/loginPage.js"></script>
+    <script>
+        // Check if page is opened correctly through localhost
+        window.addEventListener('DOMContentLoaded', function() {
+            if (window.location.protocol === 'file:') {
+                alert('⚠️ IMPORTANT: You must open this page through the server!\n\nCorrect URL:\nhttp://localhost:3000/src/html/loginPage.html\n\nDo NOT open the HTML file directly!\n\n1. Make sure server is running: npm start\n2. Open: http://localhost:3000/src/html/loginPage.html');
+            }
+        });
+    </script>
 </head>
 
 <body>
